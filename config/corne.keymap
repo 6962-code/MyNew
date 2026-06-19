@@ -23,7 +23,7 @@
                 &kp ESC      &kp F1       &kp F2       &kp F3       &kp F4       &none
                 
                 // 第 2 列 (Row 024) - 補滿 6 個
-                &kp `        &kp 1        &kp 2        &kp 3        &kp 4        &none
+                &kp GRAVE    &kp 1        &kp 2        &kp 3        &kp 4        &none
                 
                 // 第 3 列 (Row 100) - 共 6 個
                 &kp TAB      &kp Q        &kp W        &kp E        &kp R        &kp T
