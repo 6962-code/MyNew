@@ -8,13 +8,11 @@
 };
 
 &kscan0 {
-    compatible = "zmk,kscan-gpio-matrix";
-    label = "KSCAN";
-    diode-direction = "col2row"; // 請確認你的二極體條紋確實接在 Row 線上
+    diode-direction = "col2row";
 
     row-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>,
                 <&gpio0 24 GPIO_ACTIVE_HIGH>,
-                <&gpio1 0  GPIO_ACTIVE_HIGH>, // 修改為 0，不要寫 00
+                <&gpio1 0  GPIO_ACTIVE_HIGH>,
                 <&gpio0 11 GPIO_ACTIVE_HIGH>,
                 <&gpio1 4  GPIO_ACTIVE_HIGH>,
                 <&gpio1 6  GPIO_ACTIVE_HIGH>;
