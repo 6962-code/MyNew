@@ -1,0 +1,42 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/reset.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // 6x6 總共 36 個位置。請對照你圖上的格子看哪幾格是空的
+            // 如果某個十字交叉點在物理上「沒有裝軸」，敲擊時該位置就不會有反應，這完全正常。
+            bindings = <
+                // 第 1 列 (Row 022) - 補滿 6 個
+                &kp ESC      &kp F1       &kp F2       &kp F3       &kp F4       &none
+                
+                // 第 2 列 (Row 024) - 補滿 6 個
+                &kp `        &kp 1        &kp 2        &kp 3        &kp 4        &none
+                
+                // 第 3 列 (Row 100) - 共 6 個
+                &kp TAB      &kp Q        &kp W        &kp E        &kp R        &kp T
+                
+                // 第 4 列 (Row 011) - 共 6 個
+                &kp LCTRL    &kp A        &kp S        &kp D        &kp F        &kp G
+                
+                // 第 5 列 (Row 104) - 共 6 個
+                &kp LSHFT    &kp Z        &kp X        &kp C        &kp V        &kp B
+                
+                // 第 6 列 (Row 106) - 補滿 6 個（修正原本空置的 &kp）
+                &none        &none        &none        &kp LALT     &kp SPACE    &kp ENTER
+            >;
+        };
+    };
+};
